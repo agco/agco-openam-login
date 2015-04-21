@@ -1,0 +1,16 @@
+{
+  "name": "agco-openam-login",
+  "version": "0.1.0",
+  "authors": [
+  ],
+  "description": "AGCO OpenAM Login Module",
+  "main": "dist/login.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
