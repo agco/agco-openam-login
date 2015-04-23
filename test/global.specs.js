@@ -1,14 +1,24 @@
 var chai = require('chai');
 var chaiHttp = require('chai-http');
+var nock = require('nock');
+var Browser = require('zombie');
+
+nock.enableNetConnect();
 
 chai.use(chaiHttp);
 
 before(function () {
-    var Browser = require('zombie');
-    Browser.localhost('example.com', 3000);
+    Browser.localhost('localhost', 3000);
 
     this.browser = new Browser();
+    this.authMock = nock('http://localhost', {allowUnmocked : true})
+        .post('/openam/login', {
+            grant_type: 'password',
+            client_id: 'clientId',
+            username: '',
+            password: '' })
+        .reply(200, { access_token : 'xxxxx_yyyyyy_zzzzzz'});
 
-    var app = require('../index');
-    return app;
+          var app = require('../index');
+          return app;
 });

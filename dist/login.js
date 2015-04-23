@@ -2,6 +2,7 @@ var Login = function() {};
 
 Login.prototype.init = function(options) {
     var me = this;
+    $.support.cors = true;
 
     this.formId = '#' + options.formId;
     this.options = options;
@@ -23,7 +24,6 @@ Login.prototype.submit = function(event) {
         var authData = {
             grant_type : 'password',
             client_id : me.options.clientId,
-            client_secret : me.options.clientSecret,
             username : me.userNameField.val(),
             password: me.passwordField.val()
         };

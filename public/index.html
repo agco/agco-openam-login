@@ -22,13 +22,12 @@
     var login = new Login();
     var promise = login.init({
         formId : 'login_form',
-        url : 'url',
-        clientId : 'clientId',
-        clientSecret : 'clientSecret'
+        url : 'http://localhost/openam/login',
+        clientId : 'clientId'
     });
 
     promise.then(function(auth) {
-        console.log(auth);
+        window.auth = auth;
     });
 </script>
 </html>
