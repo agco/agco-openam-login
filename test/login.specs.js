@@ -24,7 +24,6 @@ describe('Auth', function() {
             return this.browser.pressButton('Login');
         });
 
-
         it('should show the login form', function() {
             this.browser.assert.evaluate('window.auth.access_token', 'xxxxx_yyyyyy_zzzzzz');
         });

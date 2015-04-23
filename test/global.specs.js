@@ -1,11 +1,7 @@
-var chai = require('chai');
-var chaiHttp = require('chai-http');
 var nock = require('nock');
 var Browser = require('zombie');
 
 nock.enableNetConnect();
-
-chai.use(chaiHttp);
 
 before(function () {
     Browser.localhost('localhost', 3000);
