@@ -1,0 +1,32 @@
+{
+  "name": "agco-openam-login",
+  "version": "1.0.0",
+  "description": "## Dependencies This module depends on [jquery](https://github.com/jquery/jquery) and [bluebird](https://github.com/petkaantonov/bluebird)",
+  "main": " ",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agco/agco-openam-login.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agco/agco-openam-login/issues"
+  },
+  "homepage": "https://github.com/agco/agco-openam-login",
+  "devDependencies": {
+    "mocha": "^2.2.4",
+    "nock": "^1.6.1",
+    "zombie": "~3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "express": "^4.12.3",
+    "zombie": "^3.1.1"
+  }
+}
