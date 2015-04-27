@@ -27,7 +27,14 @@
     });
 
     promise.then(function(auth) {
+      console.log(auth)
         window.auth = auth;
-    });
+    }, function(err) {
+      window.err = 'err';
+        console.log('----');
+    })
+.catch(function() {
+  console.log('err')
+})
 </script>
 </html>
