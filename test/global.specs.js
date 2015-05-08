@@ -11,6 +11,7 @@ before(function () {
         .post('/openam/login', {
             grant_type: 'password',
             client_id: 'clientId',
+            client_secret: 'clientSecret',
             username: '',
             password: '' })
         .reply(200, { access_token : 'xxxxx_yyyyyy_zzzzzz'});

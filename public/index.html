@@ -23,7 +23,8 @@
     var promise = login.init({
         formId : 'login_form',
         url : 'http://localhost/openam/login',
-        clientId : 'clientId'
+        clientId : 'clientId',
+        clientSecret : 'clientSecret',
     });
 
     promise.then(function(auth) {
